@@ -1,0 +1,9 @@
+<div style="width: 50%; margin: 0 auto; margin-top: 24px; padding: 24px; display: flex; flex-direction: column; align-items: center">
+  <div>
+    <p>You: <%= @question %></p>
+  </div>
+  <div>
+    <p>Coach: <%= @answer %></p>
+  </div>
+  <%= link_to 'You must re-inquire. CLICK ME', ask_path %>
+</div>
