@@ -1,7 +1,5 @@
 class QuestionsController < ApplicationController
-  def ask
-    puts 'ROUTED'
-  end
+  def ask; end
 
   def answer
     @question = params[:question]
