@@ -30,22 +30,15 @@ class QuestionsTest < ApplicationSystemTestCase
     assert_text 'Great'
   end
 
+  test 'functioning back link button from coach response to ask another question' do
+    visit answer_url(question: 'any old nonsense')
+    find_link('back-link').click
+
+    assert_text 'The Question Opportunity'
+  end
+
   test 'the page for asking questions is pretty' do
     visit ask_url
     take_screenshot
   end
-
-  # test 'the page for seeing the coach\'s response is pretty' do
-  #   visit answer_url
-  #   take_screenshot
-  # end
-
-  # test 'functioning back link button from coach response to ask another question' do
-  #   visit answer_url
-  #   take_screenshot
-  #   find_link('#back-link').click
-  #   take_screenshot
-
-  #   assert_text 'The Question Opportunity'
-  # end
 end
